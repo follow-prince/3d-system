@@ -10,7 +10,6 @@ main-site/node_modules/
 inner-site/.astro/
 main-site/.astro/
 # generated files
-public/
 /inner-site/build
 /main-site/build
 
