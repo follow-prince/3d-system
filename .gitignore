@@ -1,0 +1,40 @@
+# build output
+# dist/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+inner-site/node_modules/
+main-site/node_modules/
+inner-site/.astro/
+main-site/.astro/
+# generated files
+public/
+/inner-site/build
+/main-site/build
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+main-site/npm-debug.log*
+main-site/yarn-debug.log*
+main-site/yarn-error.log*
+main-site/pnpm-debug.log*
+
+inner-site/npm-debug.log*
+inner-site/yarn-debug.log*
+inner-site/yarn-error.log*
+inner-site/pnpm-debug.log*
+
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
