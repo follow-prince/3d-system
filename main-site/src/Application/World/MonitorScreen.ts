@@ -184,7 +184,7 @@ export default class MonitorScreen extends EventEmitter {
 
         // Set iframe attributes
         // PROD
-        iframe.src = 'http://os.elavarasan.me';
+        iframe.src = 'https://3d-system.vercel.app/';
         /**
          * Use dev server is query params are present
          *
@@ -204,7 +204,7 @@ export default class MonitorScreen extends EventEmitter {
         iframe.className = 'jitter';
         iframe.id = 'computer-screen';
         iframe.frameBorder = '0';
-        iframe.title = 'HeffernanOS';
+        iframe.title = 'Prince OS';
 
         // Add iframe to container
         container.appendChild(iframe);
