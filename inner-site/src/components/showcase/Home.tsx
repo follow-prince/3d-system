@@ -1,26 +1,24 @@
 import React from 'react';
 import { Link } from '../general';
-import { useNavigate } from 'react-router';
+import HiImage from '../../assets/gif/hi.gif'
 
 export interface HomeProps {}
 
 const Home: React.FC<HomeProps> = (props) => {
-    const navigate = useNavigate();
-
-    const goToContact = () => {
-        navigate('/contact');
-    };
-
     return (
         <div style={styles.page}>
-            <div style={styles.header}>
-                
-                <h1  style={styles.name}>ELAVARASAN</h1>
-                <h2 style={styles.jobrole}>Software Developer</h2>
-            </div>
             <div style={styles.buttons}>
+                <img src={HiImage} width={'60%'} alt="" />
+                <h1 style={styles.Welcome}>Welcome to my website!</h1>
 
-                
+            </div>
+
+            <div style={styles.header}>
+                <h1 style={styles.name}> <span style={styles.nameSpan}>I'm </span>ELAVARASAN</h1>
+                <h2 style={styles.jobrole}>Creative Developer</h2>
+            </div>
+
+            <div style={styles.buttons}>
                 <Link containerStyle={styles.link} to="about" text="ABOUT" />
                 <Link
                     containerStyle={styles.link}
@@ -38,26 +36,39 @@ const Home: React.FC<HomeProps> = (props) => {
                     text="CONTACT"
                 />
             </div>
-
-
-
-
-            <div style={styles.forHireContainer} onMouseDown={goToContact}>
-                
-             
-            </div>
         </div>
     );
 };
 
 const styles: StyleSheetCSS = {
+    nameSpan:{
+            fontSize:55
+    },
+    Welcome: {
+        fontSize: 44,
+        letterSpacing: 2,
+        color: 'black',
+        textShadow: '0 0 5px #737373',
+        justifyContent: 'center',
+        alignItems: 'center',
+        textAlign: 'center',
+        marginTop: 200,
+    },
+    CardProfile: {
+        marginTop: 10,
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        cursor: 'pointer',
+        marginBottom: 50,
+    },
     jobrole: {
         fontSize: 24,
         letterSpacing: 2,
         color: 'black',
         textShadow: '0 0 10px #737373',
     },
-  
+
     page: {
         left: 0,
         right: 0,
@@ -68,14 +79,11 @@ const styles: StyleSheetCSS = {
         flexDirection: 'column',
         height: '100%',
         backgroundColor: 'white',
-    
     },
-    
-    
+
     header: {
         textAlign: 'center',
-        marginBottom: 94,
-        marginTop: 4,
+        marginBottom: 20,
 
         flexDirection: 'column',
         alignItems: 'center',
@@ -96,7 +104,7 @@ const styles: StyleSheetCSS = {
         cursor: 'pointer',
         backgroundColor: 'black',
         color: 'white',
-        textDecoration: 'none', 
+        textDecoration: 'none',
         marginLeft: 40,
         filter: 'drop-shadow(0 0 10px black)',
         letterSpacing: 2,
@@ -119,7 +127,6 @@ const styles: StyleSheetCSS = {
         letterSpacing: 2,
         color: 'black',
         textShadow: '0 0 10px   #484848',
-
     },
 };
 

@@ -11,6 +11,7 @@ import ThisComputer from '../applications/ThisComputer';
 import Clanguage from '../applications/Clanguage';
 import NotePad from '../applications/NotePad';
 import Paint from '../applications/Paint';
+import MacBook from './MacOS/MacBook';
 
 
 export interface DesktopProps {}
@@ -216,6 +217,7 @@ const Desktop: React.FC<DesktopProps> = (props) => {
                     </div>
                 );
             })}
+            <MacBook />
             <div style={styles.shortcuts}>
                 {shortcuts.map((shortcut, i) => {
                     return (
